@@ -16,26 +16,26 @@
         default_layer { //layer 0
 
             bindings = <
-    &none   &tog 1   &mo 2      &kp LSHIFT
-    &none   &kp Q    &kp W      &kp E
-    &none   &kp A    &kp S      &kp D
+    &tog 1   &mo 2      &kp LSHIFT
+    &kp Q    &kp W      &kp E
+    &kp A    &kp S      &kp D
             >;
 
         };
 
         num_layer {
             bindings = <
-    &none   &trans &trans &trans
-    &none   &kp N1 &kp N2 &kp N3
-    &none   &kp N4 &kp N5 &kp N6
+    &trans &trans &trans
+    &kp N1 &kp N2 &kp N3
+    &kp N4 &kp N5 &kp N6
             >;
         };
 
         lower_layer {
             bindings = <
-    &none   &trans       &trans       &bootloader
-    &none   &bt BT_SEL 3 &bt BT_CLR   &sys_reset
-    &none   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2
+    &trans       &trans       &bootloader
+    &bt BT_SEL 3 &bt BT_CLR   &sys_reset
+    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2
             >;
         };
     };

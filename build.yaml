@@ -24,3 +24,7 @@ include:
     shield: caldera_left
   - board: nice_nano_v2
     shield: caldera_right
+  - board: nice_nano_v2
+    shield: kalypso_left
+  - board: nice_nano_v2
+    shield: kalypso_right

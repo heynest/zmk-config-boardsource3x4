@@ -9,12 +9,22 @@
 
                 default_layer {
                         bindings = <
-              &kp N1      &kp N2     &kp N3          &kp N4          &kp N5             &kp N6    &kp N7        &kp N8      &kp N9     &kp N0
-   &kp ESC    &kp DE_Z    &kp DE_Y   &kp U           &kp A           &kp Q              &kp P     &kp B         &kp M       &mt RALT L &kp F      &kp &none
-   &kp &none  &mt LWIN C  &mt LALT S &mt LSHFT I     &mt LCTRL E     &kp O              &kp D     &mt RCTRL T   &mt RSHFT N &mt LALT R &mt RWIN H &kp J
-   &kp &none  &kp V       &kp X      &kp DE_U_UMLAUT &kp DE_A_UMLAUT &kp DE_O_UMLAUT    &kp W     &kp G         &kp COMMA   &kp DOT    &kp K      &kp DE_CAPITAL_SZ
-                          &kp &none  &kp &none       &kp &none                                    &kp &none     &kp &none   &kp &none 
-                          &kp &none  &kp &none       &kp &none       &kp SPACE          &kp &none &kp &none     &kp &none   &kp &none
+&kp DE_Z        &kp DE_Y        &kp U           &kp A           &kp Q
+&mt LWIN C      &mt LALT S      &mt LSHFT I     &mt LCTRL E     &kp O              
+&kp V           &kp X           &kp DE_U_UMLAUT &kp DE_A_UMLAUT &kp DE_O_UMLAUT
+                &kp DE_EXCL     &kp DE_QMARK
+
+                                &kp N1          &kp N2             &kp N3
+                                                &kp SPACE          
+                        
+
+&kp P           &kp B           &kp M           &mt RALT L              &kp F
+&kp D           &mt RCTRL T     &mt RSHFT N     &mt LALT R              &mt RWIN H
+&kp W           &kp G           &kp J           &kp DE_CAPITAL_SZ       &kp K 
+                                &kp COMMA       &kp DOT
+                                 
+&kp N4          &kp N5          &kp N6   
+                &kp N7
                         >;
                 };
                 lower_layer {

@@ -11,18 +11,15 @@
                         bindings = <
 &kp DE_Z        &kp DE_Y        &kp U           &kp A           &kp Q
 &mt LWIN C      &mt LALT S      &mt LSHFT I     &mt LCTRL E     &kp O              
-&kp V           &kp X           &kp DE_U_UMLAUT &kp DE_A_UMLAUT &kp DE_O_UMLAUT
+&kp V           &kp X           &kp DE_UE       &kp DE_AE       &kp DE_OE
                 &kp DE_EXCL     &kp DE_QMARK
-
-                                &kp N1          &kp N2             &kp N3
+                                &kp N1          &kp N2          &bt BT_CLR
                                                 &kp SPACE          
-                        
 
-&kp P           &kp B           &kp M           &mt RALT L              &kp F
-&kp D           &mt RCTRL T     &mt RSHFT N     &mt LALT R              &mt RWIN H
-&kp W           &kp G           &kp J           &kp DE_CAPITAL_SZ       &kp K 
-                                &kp COMMA       &kp DOT
-                                 
+&kp P           &kp B           &kp M           &mt RALT L      &kp F
+&kp D           &mt RCTRL T     &mt RSHFT N     &mt LALT R      &mt RWIN H
+&kp W           &kp G           &kp J           &kp DE_SZ       &kp K 
+                                &kp COMMA       &kp DOT    
 &kp N4          &kp N5          &kp N6   
                 &kp N7
                         >;

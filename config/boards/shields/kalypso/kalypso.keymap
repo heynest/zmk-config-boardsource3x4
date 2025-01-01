@@ -3,6 +3,11 @@
 #include <dt-bindings/zmk/bt.h>
 #include "keys_de.h"
 
+#define DEFAULT 0
+#define SYMBOLS 1
+#define NUMB    2
+#define FKEYS   3
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -14,7 +19,7 @@
                 &mt LWIN C      &mt LALT S      &mt LSHFT I     &mt LCTRL E     &kp O
                 &kp V           &kp X           &kp DE_UE       &kp DE_AE       &kp DE_OE
                                 &kp DE_EXCL     &kp DE_QMARK
-                                                &kp N1          &kp N2          &kp N3
+                                                &mo NUMB        &mo SYMBOLS     &mo FKEYS
                                                                 &kp SPACE
 
                 // right half
@@ -26,6 +31,7 @@
                                 &kp N7
             >;
         };
+
         /* LAYER TEMPLATE
         template_layer {
             bindings = <
@@ -47,6 +53,7 @@
             >;
         };
         */
+
         symbols_layer {
             bindings = <
                 // left half
@@ -68,6 +75,27 @@
                                 &trans
             >;
         };
+
+        numb_layer {
+            bindings = <
+                // left half
+                &none           &none           &none           &none           &none
+                &mt LWIN C      &mt LALT S      &mt LSHFT I     &mt LCTRL E     &none
+                &none           &none           &none           &none           &none
+                                &none           &none
+                                                &trans          &trans          &trans
+                                                                &trans
+
+                // right half
+                &none           &none           &none           &mt RALT L      &none
+                &none           &mt RCTRL T     &mt RSHFT N     &mt LALT R      &mt RWIN H
+                &none           &none           &none           &none           &none
+                                &none           &none
+                &trans          &trans          &trans
+                                &trans
+            >;
+        };
+
         fkeys_layer {
             bindings = <
                 // left half

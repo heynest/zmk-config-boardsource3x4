@@ -4,35 +4,88 @@
 #include "keys_de.h"
 
 / {
-        keymap {
-                compatible = "zmk,keymap"; 
+    keymap {
+        compatible = "zmk,keymap";
 
-                default_layer {
-                        bindings = <
-&kp DE_Z        &kp DE_Y        &kp U           &kp A           &kp Q
-&mt LWIN C      &mt LALT S      &mt LSHFT I     &mt LCTRL E     &kp O              
-&kp V           &kp X           &kp DE_UE       &kp DE_AE       &kp DE_OE
-                &kp DE_EXCL     &kp DE_QMARK
-                                &kp N1          &kp N2          &kp N3
-                                                &kp SPACE          
+        default_layer {
+            bindings = <
+                // left half
+                &kp DE_Z        &kp DE_Y        &kp U           &kp A           &kp Q
+                &mt LWIN C      &mt LALT S      &mt LSHFT I     &mt LCTRL E     &kp O
+                &kp V           &kp X           &kp DE_UE       &kp DE_AE       &kp DE_OE
+                                &kp DE_EXCL     &kp DE_QMARK
+                                                &kp N1          &kp N2          &kp N3
+                                                                &kp SPACE
 
-&kp P           &kp B           &kp M           &mt RALT L      &kp F
-&kp D           &mt RCTRL T     &mt RSHFT N     &mt LALT R      &mt RWIN H
-&kp W           &kp G           &kp J           &kp DE_SZ       &kp K 
-                                &kp COMMA       &kp DOT    
-&kp N4          &kp N5          &kp N6   
-                &kp N7
-                        >;
-                };
-                lower_layer {
-                        bindings = <
-             &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4           &trans    &trans    &trans   &trans     &trans
-   &bt BT_CLR   &trans      &trans         &trans         &trans         &trans                 &trans    &trans    &trans   &trans     &trans    &bt BT_CLR
-   &trans       &trans      &trans         &kp LPAR       &kp RPAR       &trans                 &trans    &kp LBKT  &kp RBKT &kp MINUS  &kp EQUAL &trans
-   &trans       &trans      &trans         &trans         &trans         &trans                 &trans    &trans    &trans   &trans     &trans    &trans
-                            &trans         &trans         &trans                                          &trans    &trans   &trans
-                            &trans         &trans         &trans         &trans                 &trans    &trans    &trans   &trans
-                        >;
-                };
+                // right half
+                &kp P           &kp B           &kp M           &mt RALT L      &kp F
+                &kp D           &mt RCTRL T     &mt RSHFT N     &mt LALT R      &mt RWIN H
+                &kp W           &kp G           &kp J           &kp DE_SZ       kp K
+                                &kp COMMA       &kp DOT
+                &kp N4          &kp N5          &kp N6
+                                &kp N7
+            >;
         };
+        /* LAYER TEMPLATE
+        template_layer {
+            bindings = <
+                // left half
+                &none           &none           &none           &none           &none
+                &mt LWIN C      &mt LALT S      &mt LSHFT I     &mt LCTRL E     &none
+                &none           &none           &none           &none           &none
+                                &none           &none
+                                                &trans          &trans          &trans
+                                                                &trans
+
+                // right half
+                &none           &none           &none           &mt RALT L      &none
+                &none           &mt RCTRL T     &mt RSHFT N     &mt LALT R      &mt RWIN H
+                &none           &none           &none           &none           &none
+                                &none           &none
+                &trans          &trans          &trans
+                                &trans
+            >;
+        };
+        */
+        symbols_layer {
+            bindings = <
+                // left half
+                &none           &none           &none           &none           &none
+                //                              &kp LPAR       &kp RPAR
+                &mt LWIN C      &mt LALT S      &mt LSHFT I     &mt LCTRL E     &none
+                &none           &none           &none           &none           &none
+                                &none           &none
+                                                &trans          &trans          &trans
+                                                                &trans
+
+                // right half
+                &none           &none           &none           &mt RALT L      &none
+                // &trans       &kp LBKT        &kp RBKT        &kp MINUS  &kp EQUAL &trans
+                &none           &mt RCTRL T     &mt RSHFT N     &mt LALT R      &mt RWIN H
+                &none           &none           &none           &none           &none
+                                &none           &none
+                &trans          &trans          &trans
+                                &trans
+            >;
+        };
+        fkeys_layer {
+            bindings = <
+                // left half
+                &none           &none           &none           &none           &none
+                &mt LWIN C      &mt LALT S      &mt LSHFT I     &mt LCTRL E     &none
+                &none           &none           &none           &none           &none
+                                &none           &none
+                                                &bt BT_CLR      &trans          &trans
+                                                                &trans
+
+                // right half
+                &none           &none           &none           &none           &none
+                &none           &bt BT_SEL 3    &bt BT_SEL 4    &none           &none
+                &none           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &none
+                                &none           &none
+                &trans          &trans          &bt BT_CLR
+                                &trans
+            >;
+        };
+    };
 };
